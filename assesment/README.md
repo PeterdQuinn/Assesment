@@ -43,6 +43,21 @@ This system ensures **efficient data ingestion, transformation, and visualizatio
 **3️⃣ Challenge: Making the UI user-friendly**  
 ✔ **Solution:** Used **Material-UI** for a clean layout and **Recharts** for interactive visualizations.  
 
+**4️⃣ Challenge: ETL Process Efficiency**  
+✔ **Solution:** Optimized the ETL pipeline with **Pandas** for batch data processing, reducing latency.  
+
+## Example API Response
+
+When making a `GET` request to `/data`, the API returns JSON-formatted processed data:
+
+```json
+[
+  {"id": 1, "name": "Revenue", "value": 1500.75},
+  {"id": 2, "name": "Expenses", "value": 900.50},
+  {"id": 3, "name": "Profit", "value": 600.25}
+]
+```
+
 ## Local Setup Instructions
 
 ### Backend Setup
