@@ -2,25 +2,25 @@
 
 ## Project Overview
 
-This project demonstrates a full-stack Business Intelligence (BI) solution with **data ingestion, ETL processing, and an interactive dashboard**. It integrates data from an API, processes it, stores it in a database, and visualizes insights in a web-based dashboard.
+This project is a **full-stack Business Intelligence (BI) solution** that includes **data ingestion, ETL processing, and an interactive analytics dashboard**. The system fetches data from an API, processes and stores it in a database, and displays visual insights in a user-friendly web interface.
 
 ## Features
 
-✅ **Backend**: FastAPI for data ingestion and API service.
-✅ **ETL Processing**: Data transformation using Pandas and SQLAlchemy.
-✅ **Database**: PostgreSQL (or SQLite for local development).
-✅ **Frontend**: React.js dashboard with Recharts for data visualization.
-✅ **CI/CD**: GitHub Actions for automated deployment/testing.
-✅ **Scalability**: Modular architecture ready for production use.
-✅ **Data Validation**: Ensures accuracy in BI reporting.
-✅ **Automated Testing**: Unit tests for data integrity.
+✅ **Backend**: FastAPI for data ingestion and API service.  
+✅ **ETL Processing**: Data transformation using Pandas and SQLAlchemy.  
+✅ **Database**: PostgreSQL (or SQLite for local development).  
+✅ **Frontend**: React.js with Material-UI and Recharts for data visualization.  
+✅ **CI/CD**: GitHub Actions for automated testing and deployment.  
+✅ **Scalability**: Modular and production-ready architecture.  
+✅ **Data Validation**: Ensures accuracy in BI reporting.  
+✅ **Automated Testing**: Unit tests for data integrity.  
 
 ## Technologies Used
 
-- **Backend**: FastAPI, SQLAlchemy, Pandas, Uvicorn, Alembic (for migrations)
+- **Backend**: FastAPI, SQLAlchemy, Pandas, Uvicorn, Alembic (for database migrations)
 - **Database**: PostgreSQL (SQLite for local development)
 - **ETL**: Pandas for data cleaning and transformation
-- **Frontend**: React.js, Recharts, Axios, Tailwind CSS
+- **Frontend**: React.js, Material-UI, Recharts, Axios, Tailwind CSS
 - **CI/CD**: GitHub Actions for automated testing and deployment
 - **Testing**: Pytest for backend unit testing
 
@@ -74,7 +74,7 @@ curl http://127.0.0.1:8000/data
 
 ### Frontend Setup
 
-#### 1. Navigate to frontend directory and install dependencies
+#### 1. Navigate to the frontend directory and install dependencies
 
 ```sh
 cd frontend
@@ -87,7 +87,7 @@ npm install
 npm run dev
 ```
 
-## Deployment Instructions
+### Deployment Instructions
 
 - Use **Docker** for containerization:
 
@@ -102,13 +102,14 @@ docker-compose up --build
 alembic upgrade head
 ```
 
-- Ensure environment variables are set in `.env` file before deployment.
+- Ensure environment variables are set in a `.env` file before deployment.
 
 ## API Endpoints
 
 | Method | Endpoint  | Description          |
 | ------ | --------- | -------------------- |
 | GET    | `/data`   | Fetch processed data |
+| POST   | `/data`   | Insert new data      |
 | GET    | `/etl`    | Trigger ETL process  |
 | GET    | `/health` | Check API health     |
 
@@ -121,3 +122,4 @@ alembic upgrade head
 
 ```sh
 pytest tests/
+```
