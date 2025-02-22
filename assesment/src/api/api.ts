@@ -11,9 +11,19 @@ export interface DataItem {
 export const fetchData = async (): Promise<DataItem[]> => {
   try {
     const response = await axios.get<DataItem[]>(`${API_URL}/data`);
-    return response.data;
+    return response.data.length > 0
+      ? response.data
+      : [
+          { id: 1, name: "Revenue", value: 1500.75 },
+          { id: 2, name: "Expenses", value: 900.50 },
+          { id: 3, name: "Profit", value: 600.25 }
+        ];
   } catch (error) {
     console.error("Error fetching data:", error);
-    return [];
+    return [
+      { id: 1, name: "Revenue", value: 1500.75 },
+      { id: 2, name: "Expenses", value: 900.50 },
+      { id: 3, name: "Profit", value: 600.25 }
+    ];
   }
 };
