@@ -15,14 +15,33 @@ This project is a **full-stack Business Intelligence (BI) solution** that includ
 ✅ **Data Validation**: Ensures accuracy in BI reporting.  
 ✅ **Automated Testing**: Unit tests for data integrity.  
 
+## Problem Solved
+
+Modern businesses need **real-time analytics** to make **data-driven decisions**. This project provides a **Business Intelligence (BI) dashboard** that allows users to:
+- **Collect & visualize data** from an API.
+- **Process raw data** with an ETL pipeline.
+- **Store data securely** in a PostgreSQL database.
+- **Display insights** in an interactive dashboard.
+
+This system ensures **efficient data ingestion, transformation, and visualization**, making it easier to track business performance.
+
 ## Technologies Used
 
-- **Backend**: FastAPI, SQLAlchemy, Pandas, Uvicorn, Alembic (for database migrations)
-- **Database**: PostgreSQL (SQLite for local development)
-- **ETL**: Pandas for data cleaning and transformation
-- **Frontend**: React.js, Material-UI, Recharts, Axios, Tailwind CSS
-- **CI/CD**: GitHub Actions for automated testing and deployment
-- **Testing**: Pytest for backend unit testing
+- **Backend:** FastAPI, SQLAlchemy, Pandas, PostgreSQL  
+- **Frontend:** React.js, Material-UI, Recharts  
+- **Data Processing:** ETL (Extract, Transform, Load) with Pandas  
+- **Testing & Deployment:** Pytest, GitHub Actions, Docker  
+
+## Challenges & Solutions
+
+**1️⃣ Challenge: Ensuring real-time data updates**  
+✔ **Solution:** Used **state management in React** and `useEffect()` to automatically fetch new data after every update.  
+
+**2️⃣ Challenge: Handling API failures & validation**  
+✔ **Solution:** Implemented **error handling** in the frontend & backend, displaying alerts if the API fails.  
+
+**3️⃣ Challenge: Making the UI user-friendly**  
+✔ **Solution:** Used **Material-UI** for a clean layout and **Recharts** for interactive visualizations.  
 
 ## Local Setup Instructions
 

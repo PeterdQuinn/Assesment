@@ -24,7 +24,7 @@ function App() {
     }
     setError(null);
     try {
-      const response = await axios.post(`${API_URL}/data`, { name, value: parseFloat(value) });
+      await axios.post(`${API_URL}/data`, { name, value: parseFloat(value) });
       const updatedData = await fetchData(); // Fetch updated data after insertion
       setData(updatedData);
       setName("");
